@@ -2,6 +2,10 @@ import React from 'react';
 import logo from './logo.svg';
 import logoName from './logo-name-m.svg';
 import './App.css';
+import Button from './components/Button';
+import Dropdown from './components/Dropdown';
+import Input from './components/Input';
+import Map from './components/Map';
 
 const App = () => {
   return (
@@ -21,6 +25,19 @@ const App = () => {
           Windows 93
         </a>
       </header>
+      {/* <Dropdown entries={['Infraestructura', 'Movilidad']}/>
+      <Button
+        primary
+        onClick={() => console.log('Click')}
+      >
+        Button
+      </Button>
+      <Input
+        label="Label"
+        placeholder="Placeholder"
+        textarea
+      />
+      <Map /> */}
     </div>
   );
 }
