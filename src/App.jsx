@@ -25,7 +25,7 @@ const App = () => {
           Windows 93
         </a>
       </header>
-      <Dropdown entries={['Infraestructura', 'Movilidad']}/>
+      {/* <Dropdown entries={['Infraestructura', 'Movilidad']}/>
       <Button
         primary
         onClick={() => console.log('Click')}
@@ -37,7 +37,7 @@ const App = () => {
         placeholder="Placeholder"
         textarea
       />
-      <Map />
+      <Map /> */}
     </div>
   );
 }
