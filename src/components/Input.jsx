@@ -1,45 +1,47 @@
-// create an input component with a label passed as prop. the label has to be superposed over the outlined of the border input. if textarea props is passed to the component, the border of the input is #DBDBDB instead of #FF7D54 and it has a min-height of 70px. Also placeholder props is passed to the component.
-
 import React from 'react';
 import styled from 'styled-components';
+import { colors } from '../styles/colors';
 
-const Input = ({ label, textarea, placeholder }) => {
+const Input = ({ label, textarea, length, name, placeholder }) => {
     return (
         <StyledInput>
             <StyledLabel>{label}</StyledLabel>
-            <StyledInputField textarea={textarea} placeholder={placeholder} />
+            <StyledInputField
+                name={name}
+                maxLength={length}
+                $textarea={textarea}
+                placeholder={placeholder} />
         </StyledInput>
     );
 }
 
 const StyledInput = styled.div`
-    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
 `;
 
 const StyledLabel = styled.label`
-    position: absolute;
-    top: -10px;
-    left: 10px;
-    background-color: #fff;
     padding: 0 5px;
-    color: #FF7D54;
-    font-size: 12px;
+    color: ${colors.darkgrey};
+    font-size: 14px;
     font-weight: 600;
 `;
 
-const StyledInputField = styled.input`
-    width: 328px;
-    height: ${props => props.textarea ? '70px' : '50px'};
-    border: 2px solid ${props => props.textarea ? '#DBDBDB' : '#FF7D54'};
-    border-radius: 30px;
-    padding: 0 20px;
-    font-size: 16px;
+const StyledInputField = styled.textarea`
+    padding: 10px;
+    font-family: "Open Sans";
+    height: ${props => props.$textarea ? '100px' : '20px'};
+    border: 1px solid ${colors.lightgrey};
+    border-radius: 10px;
+    font-size: 12px;
     font-weight: 400;
-    color: #5F5F5F;
+    color: ${colors.darkgrey};
     margin-top: 10px;
     &::placeholder {
-        color: #5F5F5F;
-    }
+    color: ${colors.grey};
+}
 `;
 
 export default Input;
