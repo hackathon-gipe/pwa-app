@@ -4,7 +4,7 @@ import { GoogleMap, useJsApiLoader, StandaloneSearchBox, Marker } from '@react-g
 const API_KEY_MAPS = process.env.REACT_APP_MAPS_API_KEY
 
 
-const Map = () => {
+const Map = ({ setLocation }) => {
   const [marker, setMarker] = useState();
   const [center, setCenter] = useState({ lat: -3.745, lng: -38.523 });
   const locationRef = useRef(null);
@@ -20,6 +20,12 @@ const Map = () => {
       lng: e.latLng.lng()
     }
     );
+    setLocation(
+      {
+        lat: e.latLng.lat(),
+        lng: e.latLng.lng()
+      }
+    )
   };
 
   const [searchBox, setSearchBox] = useState(null);
@@ -44,7 +50,7 @@ const Map = () => {
     <GoogleMap
       id="searchbox-example"
       mapContainerStyle={{
-        width: '400px',
+        width: '100%',
         height: '400px'
       }}
       center={center}
@@ -63,7 +69,7 @@ const Map = () => {
         <input
           type="text"
           ref={locationRef}
-          placeholder="Customized your placeholder"
+          placeholder="Indica el sitio de tu propuesta..."
           style={{
             boxSizing: `border-box`,
             border: `1px solid transparent`,
