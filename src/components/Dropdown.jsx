@@ -1,19 +1,20 @@
-// create a dropdown component wich is a button showing "Ambito". When click, it opens a menu that show entries passed by props in an array. The menu has a max height of 230px and a scroll if the entries are more than 5. The menu has a border radius of 10px. The dropdown menu has a shadow of 0px 4px 4px rgba(0, 0, 0, 0.25). The dropdown menu has a background color of #fff. The dropdown menu has a font size of 16px. The dropdown menu has a font weight of 400. The dropdown menu has a color of #979797. The dropdown menu has a padding of 10px.The dropdown menu has a cursor of pointer. The dropdown menu has a z-index of 1. The dropdown menu has a position of absolute. The dropdown menu has a top of 50px. The dropdown menu has a left of 0px. The dropdown menu has a right of 0px. The dropdown menu has a bottom of 0px. The dropdown menu has a display of flex. The dropdown menu has a flex-direction of column. The dropdown menu has a justify-content of center. The dropdown menu has a align-items of center. The dropdown menu has a overflow-y of scroll. The dropdown menu has a overflow-x of hidden. When overing an option of the dropdown it becomes #FF7D54. When clicking an option of the dropdown it becomes #FF7D54.
-
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { FaAngleDown } from 'react-icons/fa'
+import { colors } from '../styles/colors';
 
 const Dropdown = ({ entries }) => {
     const [open, setOpen] = useState(false);
+    const [value, setValue] = useState("Ámbito");
 
-    const handleClick = () => {
+    const handleClick = (entry) => {
+        setValue(entry)
         setOpen(false);
     };
 
     return (
         <StyledDropdown>
-            <StyledButton onClick={() => setOpen(!open)}>Ámbito <FaAngleDown/></StyledButton>
+            <StyledButton onClick={() => setOpen(!open)}>{value} <FaAngleDown /></StyledButton>
             {open && (
                 <StyledDropdownMenu>
                     {entries.map(entry => (
@@ -22,7 +23,6 @@ const Dropdown = ({ entries }) => {
                             onClick={() => handleClick(entry)}
                         >
                             {entry}
-                            
                         </StyledDropdownEntry>
                     ))}
                 </StyledDropdownMenu>
@@ -33,17 +33,19 @@ const Dropdown = ({ entries }) => {
 
 const StyledDropdown = styled.div`
     position: relative;
+    margin-bottom: 50px;
 `;
 
-const StyledButton = styled.button`
+const StyledButton = styled.div`
     background-color: #fff;
-    color: #5F5F5F;
+    color: ${colors.darkgrey};
     font-size: 16px;
     font-weight: 400;
     width: 328px;
-    height: 50px;
-    border: 2px solid #FF7D54;
-    border-radius: 30px;
+    padding: 10px;
+    align-content: center;
+    border: 1px solid ${colors.lightgrey};
+    border-radius: 10px;
     cursor: pointer;
     &:hover {
         opacity: 0.8;
@@ -72,8 +74,9 @@ const StyledDropdownMenu = styled.div`
 
 
 const StyledDropdownEntry = styled.div`
-    height: 100%;
     font-size: 16px;
+    width: 100%;
+    padding: 10px;
     font-weight: 400;
     color: #979797;
     &:hover {
