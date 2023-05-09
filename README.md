@@ -7,6 +7,12 @@ Urbevo extrae, procesa y muestra necesidades de varias fuentes y ligadas directa
 
 Con Ubervo, empresas de infraestructura y organismos públicos pueden saber con certeza qué necesitan de ellos los ciudadanos.
 
+<p align="center">
+  <img width=150px src="https://github.com/hackathon-gipe/pwa-app/assets/9042789/3c21e5f9-1ff9-4381-b066-8fc664c2e1b5" />
+  <img width=150px src="https://github.com/hackathon-gipe/pwa-app/assets/9042789/9dc40a23-fc52-4791-8a32-a8af45b7194a" />
+  <img width=150px src="https://github.com/hackathon-gipe/pwa-app/assets/9042789/af940dbc-5eaa-4537-9c6c-6a452d489cfb" />
+</p>
+
 ## ¿Cómo funciona Urbevo?
 Urbevo es un sistema modular y extensible y, por tanto, su funcionamiento abarca diferentes partes. Esta imagen plasma un resumen de su funcionamiento:
 
