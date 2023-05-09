@@ -1,9 +1,11 @@
-<p align="center">
-  <img width="400px" src="https://ubervo.es/static/media/brand.f7c49b8b.svg" />
-</p>
+<a href="https://ubervo.es">
+  <p align="center">
+    <img width="400px" src="https://ubervo.es/static/media/brand.f7c49b8b.svg" />
+  </p>
+</a>
 
-¿Qué es Urbevo? Urbevo es un ecosistema de herramientas y aplicaciones para extraer y analizar las necesidades de indraestructura de una comunidad.
-Urbevo extrae, procesa y muestra necesidades de varias fuentes y ligadas directamente a lo que las personas necesitan. Por otro lado, ofrece un aplicación para empresas para mostrar, analizar y seleccionar las actuaciones más relevantes para una comunidad.
+¿Qué es [Urbevo](https://ubervo.es)? [Urbevo](https://ubervo.es) es un ecosistema de herramientas y aplicaciones para extraer y analizar las necesidades de indraestructura de una comunidad.
+[Urbevo](https://ubervo.es) extrae, procesa y muestra necesidades de varias fuentes y ligadas directamente a lo que las personas necesitan. Por otro lado, ofrece un aplicación para empresas para mostrar, analizar y seleccionar las actuaciones más relevantes para una comunidad.
 
 Con Ubervo, empresas de infraestructura y organismos públicos pueden saber con certeza qué necesitan de ellos los ciudadanos.
 
@@ -13,12 +15,12 @@ Con Ubervo, empresas de infraestructura y organismos públicos pueden saber con 
   <img width=150px src="https://github.com/hackathon-gipe/pwa-app/assets/9042789/af940dbc-5eaa-4537-9c6c-6a452d489cfb" />
 </p>
 
-## ¿Cómo funciona Urbevo?
-Urbevo es un sistema modular y extensible y, por tanto, su funcionamiento abarca diferentes partes. Esta imagen plasma un resumen de su funcionamiento:
+## ¿Cómo funciona [Urbevo](https://ubervo.es)?
+[Urbevo](https://ubervo.es) es un sistema modular y extensible y, por tanto, su funcionamiento abarca diferentes partes. Esta imagen plasma un resumen de su funcionamiento:
 
 ![Urbevo](https://github.com/hackathon-gipe/pwa-app/assets/9042789/df048513-47d2-46a0-80cd-4606093a437f)
 
-Aunque muy a vista de pájaro, esta imagen da una idea bastante clara de lo que hace Urbevo. Se recogen datos de diversas fuentes como puede ser Twitter, la propia aplicación de Urbevo para Android e iOS, Google reseñas, prensa... Se procesan con lo que hemos llamado el _Needs Engine_ (el motor de necesidades), el cual produce unos datos estandarizados y homogéneos que son los que se muestran en el Backoffice, listos para consultar.
+Aunque muy a vista de pájaro, esta imagen da una idea bastante clara de lo que hace [Urbevo](https://ubervo.es). Se recogen datos de diversas fuentes como puede ser Twitter, la propia aplicación de [Urbevo](https://ubervo.es) para Android e iOS, Google reseñas, prensa... Se procesan con lo que hemos llamado el _Needs Engine_ (el motor de necesidades), el cual produce unos datos estandarizados y homogéneos que son los que se muestran en el Backoffice, listos para consultar.
 
 ## De dónde obtiene datos actualmente Urbevo
 En este momento, como prueba de concepto, tenemos dos _fetchers_. El primero es la aplicación web y el segundo es de Twitter. Vamos a detallarlos.
@@ -57,7 +59,7 @@ En esta aplicación es donde las empresas pueden explorar e, idealmente, decidir
 Cada necesidad tiene un índice de relevancia que calculamos, dependiendo de cada fuente, en base a diferentes parámetros. Usando este índice y otros datos como la localización, etc. las empresas deberían tener suficiente información como para saber qué necesidades pueden cubrir en alguna obra civil que vayan a ejecutar o, por qué no, incluso planificar para cubrir una de estas necesidades.
 
 ## ¿Cómo está construída Urbevo?
-Como ya hemos visto, uno de los atractivos de Urbevo es su modularidad. Es por ello que lo hemos construído sobre AWS usando todas las piezas que nos proporciona. Su arquitectura básica se muestra en la siguiente imagen.
+Como ya hemos visto, uno de los atractivos de [Urbevo](https://ubervo.es) es su modularidad. Es por ello que lo hemos construído sobre AWS usando todas las piezas que nos proporciona. Su arquitectura básica se muestra en la siguiente imagen.
 
 ![Architecture](https://github.com/hackathon-gipe/pwa-app/assets/9042789/44c7cd6a-f041-467e-a401-96b232932113)
 
