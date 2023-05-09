@@ -53,7 +53,7 @@ Cada necesidad tiene un índice de relevancia que calculamos, dependiendo de cad
 ## ¿Cómo está construída Urbevo?
 Como ya hemos visto, uno de los atractivos de Urbevo es su modularidad. Es por ello que lo hemos construído sobre AWS usando todas las piezas que nos proporciona. Su arquitectura básica se muestra en la siguiente imagen.
 
-![Architecture](https://github.com/hackathon-gipe/pwa-app/assets/9042789/4dd96633-cb64-4ba0-99b6-b2a44d73a7ef)
+![Architecture](https://github.com/hackathon-gipe/pwa-app/assets/9042789/44c7cd6a-f041-467e-a401-96b232932113)
 
 Procedemos a detallarla a continuación.
 
@@ -98,10 +98,10 @@ Otro paso importante sería la incorporación del concepto de "usuarios" al ecos
 
 <a href="https://github.com/alesanmed
 https://github.com/Alma-Co
-https://github.com/feliperamis"><img src="https://github.com/hackathon-gipe/pwa-app/assets/9042789/0aa68b9a-636b-4784-87ca-c898543e9aa1" width="200px" stye="border-radius: 50%"/></a>
+https://github.com/feliperamis"><img src="https://github.com/hackathon-gipe/pwa-app/assets/9042789/0aa68b9a-636b-4784-87ca-c898543e9aa1" width="100px" stye="border-radius:50%"/></a>
 <a href="https://github.com/alesanmed
 https://github.com/Alma-Co
-https://github.com/feliperamis"><img src="https://github.com/hackathon-gipe/pwa-app/assets/9042789/16f217a8-3730-4c75-871c-073aadb7070f" width="200px" stye="border-radius: 50%"/></a>
+https://github.com/feliperamis"><img src="https://github.com/hackathon-gipe/pwa-app/assets/9042789/16f217a8-3730-4c75-871c-073aadb7070f" width="100px" stye="border-radius:50%"/></a>
 <a href="https://github.com/alesanmed
 https://github.com/Alma-Co
-https://github.com/feliperamis"><img src="https://github.com/hackathon-gipe/pwa-app/assets/9042789/ba590d89-799f-45cc-9cfc-52ec10c9ca0c" width="200px" stye="border-radius: 50%"/></a>
+https://github.com/feliperamis"><img src="https://github.com/hackathon-gipe/pwa-app/assets/9042789/ba590d89-799f-45cc-9cfc-52ec10c9ca0c" width="100px" stye="border-radius:50%"/></a>
