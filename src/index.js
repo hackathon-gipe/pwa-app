@@ -1,14 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './index.css';
-import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
+import Layout from './layout/Layout';
+import Home from './pages/Home';
+import Form from './pages/Form';
+import FormGeneral from './pages/FormGeneral';
+import Location from './pages/Location';
+import Success from './pages/Success';
+import NoPage from './pages/NoPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+      <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="form" element={<Form />} />
+          <Route path="form-general" element={<FormGeneral />} />
+          <Route path="location" element={<Location />} />
+          <Route path="success" element={<Success />} />
+          <Route path="*" element={<NoPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
