@@ -4,21 +4,21 @@
   </p>
 </a>
 
-¿Qué es [Urbevo](https://ubervo.es)? [Urbevo](https://ubervo.es) es un ecosistema de herramientas y aplicaciones para extraer y analizar las necesidades de indraestructura de una comunidad.
+¿Qué es [Urbevo](https://ubervo.es)? [Urbevo](https://ubervo.es) es un ecosistema de herramientas y aplicaciones para extraer y analizar las necesidades de infraestructura de una comunidad.
 [Urbevo](https://ubervo.es) extrae, procesa y muestra necesidades de varias fuentes y ligadas directamente a lo que las personas necesitan. Por otro lado, ofrece un aplicación para empresas para mostrar, analizar y seleccionar las actuaciones más relevantes para una comunidad.
 
 Con Ubervo, empresas de infraestructura y organismos públicos pueden saber con certeza qué necesitan de ellos los ciudadanos.
 
-<p align="center">
-  <img width=150px src="https://github.com/hackathon-gipe/pwa-app/assets/9042789/3c21e5f9-1ff9-4381-b066-8fc664c2e1b5" />
-  <img width=150px src="https://github.com/hackathon-gipe/pwa-app/assets/9042789/9dc40a23-fc52-4791-8a32-a8af45b7194a" />
-  <img width=150px src="https://github.com/hackathon-gipe/pwa-app/assets/9042789/af940dbc-5eaa-4537-9c6c-6a452d489cfb" />
+<p>
+  <img width=150px src="https://github.com/hackathon-gipe/pwa-app/assets/9042789/96c15ce2-f29b-4ee0-abc0-3dc61d28d482" />
+  <img width=150px src="https://github.com/hackathon-gipe/pwa-app/assets/9042789/202d889a-b603-4750-bce1-ec3ee7d5fb11" />
+  <img width=150px src="https://github.com/hackathon-gipe/pwa-app/assets/9042789/79d2dd80-41f1-48e5-bc97-ab34719a498f" />
 </p>
 
 ## ¿Cómo funciona [Urbevo](https://ubervo.es)?
 [Urbevo](https://ubervo.es) es un sistema modular y extensible y, por tanto, su funcionamiento abarca diferentes partes. Esta imagen plasma un resumen de su funcionamiento:
 
-![Urbevo](https://github.com/hackathon-gipe/pwa-app/assets/9042789/df048513-47d2-46a0-80cd-4606093a437f)
+![Urbevo](https://github.com/hackathon-gipe/pwa-app/assets/9042789/b83cfaf9-ffc4-418a-88ea-e5d382b8e1c3)
 
 Aunque muy a vista de pájaro, esta imagen da una idea bastante clara de lo que hace [Urbevo](https://ubervo.es). Se recogen datos de diversas fuentes como puede ser Twitter, la propia aplicación de [Urbevo](https://ubervo.es) para Android e iOS, Google reseñas, prensa... Se procesan con lo que hemos llamado el _Needs Engine_ (el motor de necesidades), el cual produce unos datos estandarizados y homogéneos que son los que se muestran en el Backoffice, listos para consultar.
 
@@ -29,9 +29,9 @@ En este momento, como prueba de concepto, tenemos dos _fetchers_. El primero es 
 Esta aplicación es la manera más directa que tienen los ciudadanos de impulsar el cambio en su comunidad. Desde esta aplicación se pueden reportar necesidades que se tengan o sumarte a necesidades de otras personas.
 
 <p>
-  <img width=200px src="https://github.com/hackathon-gipe/pwa-app/assets/9042789/3c21e5f9-1ff9-4381-b066-8fc664c2e1b5" />
-  <img width=200px src="https://github.com/hackathon-gipe/pwa-app/assets/9042789/9dc40a23-fc52-4791-8a32-a8af45b7194a" />
-  <img width=200px src="https://github.com/hackathon-gipe/pwa-app/assets/9042789/af940dbc-5eaa-4537-9c6c-6a452d489cfb" />
+  <img width=200px src="https://github.com/hackathon-gipe/pwa-app/assets/9042789/96c15ce2-f29b-4ee0-abc0-3dc61d28d482" />
+  <img width=200px src="https://github.com/hackathon-gipe/pwa-app/assets/9042789/202d889a-b603-4750-bce1-ec3ee7d5fb11" />
+  <img width=200px src="https://github.com/hackathon-gipe/pwa-app/assets/9042789/79d2dd80-41f1-48e5-bc97-ab34719a498f" />
 </p>
 
 El primer paso es marcar en el mapa dónde está el problema a dónde hace referencia la necesidad que se está reporando. Luego se detalla un poco más la necesidad dando un nombre y una descripción, además de alguna información extra del sitio, si fuese necesaria.
@@ -52,7 +52,8 @@ Una vez que tiene dicha información, la almacenamos en la base de datos de nece
 
 ### Backoffice para empresas
 Esta es otra de las piezas cruciales. Es el punto de acceso de las empresas para conocer y explorar las necesidades de las personas.
-![BackOffice](https://github.com/hackathon-gipe/pwa-app/assets/9042789/fea9af9d-3ecb-4def-bd63-05b079eb1dc6)
+
+![BackOffice](https://github.com/hackathon-gipe/pwa-app/assets/9042789/818ea6dd-87bb-490f-91f8-8f6929f77d5f)
 
 En esta aplicación es donde las empresas pueden explorar e, idealmente, decidir sobre qué necesidades van a actuar.
 
@@ -61,16 +62,16 @@ Cada necesidad tiene un índice de relevancia que calculamos, dependiendo de cad
 ## ¿Cómo está construída Urbevo?
 Como ya hemos visto, uno de los atractivos de [Urbevo](https://ubervo.es) es su modularidad. Es por ello que lo hemos construído sobre AWS usando todas las piezas que nos proporciona. Su arquitectura básica se muestra en la siguiente imagen.
 
-![Architecture](https://github.com/hackathon-gipe/pwa-app/assets/9042789/44c7cd6a-f041-467e-a401-96b232932113)
+![Architecture](https://github.com/hackathon-gipe/pwa-app/assets/9042789/1218772f-6c46-4701-9d89-85d820184252)
 
 Procedemos a detallarla a continuación.
 
-### Fechers
+### Fetchers
 Los _fetchers_ se ejecutan como Lambdas separadas. Una lambda por cada _fetcher_. Para desencadenar su ejecución de manera periódica vamos a usar Eventbridge.
 
 Esta elección de tecnología nos permitiría escalar de una manera muy considerable la aplicación. Si, por ejemplo, el _fetcher_ de Twitter empieza a consumir mucha memoria o tiempo de ejecución porque tiene muchas búsquedas, se puede replicar la misma lambda N veces disminuyendo el número de búsquedas de cada una hasta el punto de llegar, incluso, a tener 1 lambda por búsqueda.
 
-Además, incluír un nuevo fetcher es tan sencillo como crear una nueva lambda que haga la búsqueda y escriba el resultado en el bus de necesidades.
+Además, incluír un nuevo _fetcher_ es tan sencillo como crear una nueva lambda que haga la búsqueda y escriba el resultado en el bus de necesidades.
 
 ### Bus de necesidades
 Este componente es justo lo que indica, un bus de mensajes. El objetivo de este bus es que sea capaz de manejar cantidades **enormes** de mensajes en poco tiempo. Aunque los _fetchers_ se invoquen de manera escalonada, cuando un grupo de ellos comience a trabajar, el bus de mensaje experimentará un pico en la ingesta que debe ser capaz de manejar.
@@ -104,12 +105,6 @@ Otro paso importante sería la incorporación del concepto de "usuarios" al ecos
 
 ## Autores
 
-<a href="https://github.com/alesanmed
-https://github.com/Alma-Co
-https://github.com/feliperamis"><img src="https://github.com/hackathon-gipe/pwa-app/assets/9042789/0aa68b9a-636b-4784-87ca-c898543e9aa1" width="100px" stye="border-radius:50%"/></a>
-<a href="https://github.com/alesanmed
-https://github.com/Alma-Co
-https://github.com/feliperamis"><img src="https://github.com/hackathon-gipe/pwa-app/assets/9042789/16f217a8-3730-4c75-871c-073aadb7070f" width="100px" stye="border-radius:50%"/></a>
-<a href="https://github.com/alesanmed
-https://github.com/Alma-Co
-https://github.com/feliperamis"><img src="https://github.com/hackathon-gipe/pwa-app/assets/9042789/ba590d89-799f-45cc-9cfc-52ec10c9ca0c" width="100px" stye="border-radius:50%"/></a>
+<a href="https://github.com/alesanmed"><img src="https://avatars.githubusercontent.com/u/9042789" width="100px" stye="border-radius:50%"/></a>
+<a href="https://github.com/Alma-Co"><img src="https://avatars.githubusercontent.com/u/65400483" width="100px" stye="border-radius:50%"/></a>
+<a href="https://github.com/feliperamis"><img src="https://avatars.githubusercontent.com/u/36742027" width="100px" stye="border-radius:50%"/></a>
