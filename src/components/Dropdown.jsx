@@ -3,18 +3,18 @@ import styled from 'styled-components';
 import { FaAngleDown } from 'react-icons/fa'
 import { colors } from '../styles/colors';
 
-const Dropdown = ({ entries }) => {
+const Dropdown = ({ entries, dropdownValue, setDropdownValue }) => {
     const [open, setOpen] = useState(false);
-    const [value, setValue] = useState("Ámbito");
+   
 
     const handleClick = (entry) => {
-        setValue(entry)
+        setDropdownValue(entry)
         setOpen(false);
     };
 
     return (
         <StyledDropdown>
-            <StyledButton onClick={() => setOpen(!open)}>{value} <FaAngleDown /></StyledButton>
+            <StyledButton onClick={() => setOpen(!open)}>{dropdownValue}<StyledIcon className={open ? 'open' : ''}/></StyledButton>
             {open && (
                 <StyledDropdownMenu>
                     {entries.map(entry => (
@@ -36,14 +36,23 @@ const StyledDropdown = styled.div`
     margin-bottom: 50px;
 `;
 
+const StyledIcon = styled(FaAngleDown)`
+    margin-left: 10px;
+    &.open {
+       transform: rotate(180deg);
+    }
+`;
+
 const StyledButton = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #fff;
     color: ${colors.darkgrey};
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 400;
     width: 328px;
     padding: 10px;
-    align-content: center;
     border: 1px solid ${colors.lightgrey};
     border-radius: 10px;
     cursor: pointer;
@@ -54,7 +63,7 @@ const StyledButton = styled.div`
 
 const StyledDropdownMenu = styled.div`
     max-height: 230px;
-    width: 328px;
+    width: 95%;
     border-radius: 10px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     background-color: #fff;

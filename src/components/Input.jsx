@@ -2,13 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 import { colors } from '../styles/colors';
 
-const Input = ({ label, textarea, length, name, placeholder }) => {
+const Input = ({ label, textarea, maxLength, minLength, name, required, placeholder }) => {
     return (
         <StyledInput>
             <StyledLabel>{label}</StyledLabel>
             <StyledInputField
                 name={name}
-                maxLength={length}
+                required={required}
+                maxLength={maxLength}
+                minLength={minLength}
                 $textarea={textarea}
                 placeholder={placeholder} />
         </StyledInput>
@@ -32,7 +34,7 @@ const StyledLabel = styled.label`
 const StyledInputField = styled.textarea`
     padding: 10px;
     font-family: "Open Sans";
-    height: ${props => props.$textarea ? '100px' : '20px'};
+    height: ${props => props.$textarea ? '70px' : '20px'};
     border: 1px solid ${colors.lightgrey};
     border-radius: 10px;
     font-size: 12px;
