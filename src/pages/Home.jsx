@@ -29,6 +29,11 @@ const Home = () => {
         path={'/form-general'}>
         Buzón de sugerencias
       </Button>
+      <Button
+        secondary
+        path={'/list'}>
+        Tablón de sugerencias
+      </Button>
     </StyledContainer>
   );
 }

@@ -11,6 +11,7 @@ import FormGeneral from './pages/FormGeneral';
 import Location from './pages/Location';
 import Success from './pages/Success';
 import NoPage from './pages/NoPage';
+import List from './pages/List';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -23,6 +24,7 @@ root.render(
           <Route path="form-general" element={<FormGeneral />} />
           <Route path="location" element={<Location />} />
           <Route path="success" element={<Success />} />
+          <Route path="list" element={<List />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>

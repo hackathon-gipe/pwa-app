@@ -10,21 +10,22 @@ import { categories } from '../utils/categories';
 const Form = () => {
 
     const [redirect, setRedirect] = useState(false);
+    const [dropdownValue, setDropdownValue] = useState("Ámbito");
 
     const handleSubmit = (e) => {
-        // Prevent the browser from reloading the page
+        
         e.preventDefault();
 
-        // Read the form data
         const form = e.target;
         const formData = new FormData(form);
-        console.log(form);
-
+        formData.append("category", dropdownValue);
+     
         // You can pass formData as a fetch body directly:
         // fetch('/some-api', { method: form.method, body: formData });
 
         // Or you can work with it as a plain object:
         const formJson = Object.fromEntries(formData.entries());
+        console.log(formJson)
         setRedirect(true);
     }
 
@@ -34,25 +35,30 @@ const Form = () => {
                 <Input
                     name="title"
                     label="Nombre"
-                    length="50"
+                    maxLength="50"
+                    minLength="8"
+                    required
                     placeholder="Resume en una frase ..."
                 />
                 <Input
                     textarea
                     name="description"
                     label="Describe tu propuesta"
-                    length="500"
+                    maxLength="500"
+                    minLength="20"
+                    required
                     placeholder="Explica en detalles tu propuesta ..."
                 />
                 <Input
                     textarea
                     name="extraData"
                     label="Especifidades del sitio"
-                    length="100"
+                    maxLength="100"
                     placeholder="Si quieres darnos más detalles del lugar..."
                 />
                 <Dropdown
-                    name="whaetver"
+                    dropdownValue={dropdownValue}
+                    setDropdownValue={setDropdownValue}
                     entries={categories}
                 />
                 <Submit secondary>Enviar</Submit>
@@ -64,8 +70,11 @@ const Form = () => {
 
 
 const StyledContainer = styled.div`
-      padding: 20px;
-      height: 100%;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
 
     @media ${device.md} {
         padding: 60px 40px 0px;
@@ -77,6 +86,7 @@ const StyledForm = styled.form`
     flex-direction: column;
     justify-content:   space-between;
     align-items: center;
+    max-width: 500px;
 `;
 
 export default Form;
