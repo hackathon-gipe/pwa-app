@@ -3,10 +3,9 @@ import { GoogleMap, useJsApiLoader, StandaloneSearchBox, Marker } from '@react-g
 
 const API_KEY_MAPS = process.env.REACT_APP_MAPS_API_KEY
 
-
 const Map = ({ setLocation }) => {
   const [marker, setMarker] = useState();
-  const [center, setCenter] = useState({ lat: -3.745, lng: -38.523 });
+  const [center, setCenter] = useState({ lat: 40.41336720701619, lng: -3.704482360138317 });
   const locationRef = useRef(null);
 
   const { isLoaded } = useJsApiLoader({
@@ -14,18 +13,44 @@ const Map = ({ setLocation }) => {
     libraries: ['places']
   });
 
+  const geocodeFromGoogleApi = (latLng) => {
+    const latLngToString = `${latLng.lat()},${latLng.lng()}`;
+    fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${latLngToString}&key=${API_KEY_MAPS}`)
+      .then((responseText) => {
+          return responseText.json();
+      })
+      .then(jsonData => {
+          const components = jsonData.results[0].address_components;
+          const findComponentsTypes = (type) => {
+            const result = components.find((component) => component.types.includes(type)); 
+            return result ? result.long_name : '';
+          };
+          const address = {
+            street: `${findComponentsTypes('street_number')}, ${findComponentsTypes('route')}`,
+            city: findComponentsTypes('locality'),
+            state: findComponentsTypes('administrative_area_level_1'),
+            zip: findComponentsTypes('postal_code')
+          };
+          setLocation(
+            { 
+               ...address, 
+               latitude: latLng.lat(),
+               longitude: latLng.lng()
+             }
+           )
+           return;
+      })
+      .catch(error => {
+          console.log(error);
+    })
+  };
+
   const onMapClick = (e) => {
     setMarker({
       lat: e.latLng.lat(),
       lng: e.latLng.lng()
-    }
-    );
-    setLocation(
-      {
-        lat: e.latLng.lat(),
-        lng: e.latLng.lng()
-      }
-    )
+    });
+    return geocodeFromGoogleApi(e.latLng);
   };
 
   const [searchBox, setSearchBox] = useState(null);
@@ -55,7 +80,7 @@ const Map = ({ setLocation }) => {
       }}
       center={center}
       onClick={onMapClick}
-      zoom={10}
+      zoom={14}
       options={{
         streetViewControl: false,
         mapTypeControl: false,
