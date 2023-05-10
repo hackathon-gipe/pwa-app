@@ -32,7 +32,7 @@ const Home = () => {
       <Button
         secondary
         path={'/list'}>
-        Tablón de sugerencias
+        Lista de iniciativas
       </Button>
     </StyledContainer>
   );
