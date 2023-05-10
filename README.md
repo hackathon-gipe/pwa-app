@@ -27,6 +27,7 @@ En este momento, como prueba de concepto, tenemos dos _fetchers_. El primero es 
 
 ### Aplicación web
 Esta aplicación es la manera más directa que tienen los ciudadanos de impulsar el cambio en su comunidad. Desde esta aplicación se pueden reportar necesidades que se tengan o sumarte a necesidades de otras personas.
+Se puede descargar, en dispositivos móviles con el "Add to Home Screen" y en desktop con el icono de descarga al lado de la URL. 
 
 <p>
   <img width=200px src="https://github.com/hackathon-gipe/pwa-app/assets/9042789/96c15ce2-f29b-4ee0-abc0-3dc61d28d482" />
