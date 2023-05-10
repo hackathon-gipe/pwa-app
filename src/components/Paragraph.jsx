@@ -13,7 +13,7 @@ const StyledParagraph = styled.p`
     text-align: center;
     color: ${props => props.$color};
     font-weight: 400;
-    margin: 10px;
+    margin: 5px;
      ${props => {
         if (props.$size === "xs") {
             return `font-size: 12px;`

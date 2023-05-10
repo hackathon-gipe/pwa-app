@@ -19,7 +19,7 @@ const StyledHeader = styled.header`
         max-height: 100px;
     }
     @media ${device.lg} {
-        padding: 20px 40px;
+        padding: 10px 40px;
         max-height: 100px;
         justify-content: center;
     }
@@ -29,6 +29,9 @@ const StyledLogo = styled.img`
     height: 30px;
     @media ${device.md} {
         height: 35px;
+    }
+    @media ${device.lg} {
+        height: 50px;
     }
 `;
 
